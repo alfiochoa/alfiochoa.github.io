@@ -183,7 +183,7 @@ def index_page():
 <p class="kicker">AI automation &middot; Data integration</p>
 <h1 class="display" id="h1">Automations that <em>don&rsquo;t fail quietly.</em></h1>
 <p class="lede">{H(SITE['lede'])}</p>
-<div class="cta-row"><a class="btn btn-primary" href="#work">See the work</a><a class="btn btn-ghost" href="#watch">{icon('play')}Watch the intro</a></div>
+<div class="cta-row"><a class="btn btn-primary" href="{SITE['links'].get('linkedin') or '#contact'}">Contact me on LinkedIn</a><a class="btn btn-ghost" href="#work">See my work</a></div>
 <ul class="meta">{meta}</ul>
 </div>
 <figure class="flow-card">{flow_svg()}<figcaption>Schematic: one record fails at a step, is retried and raises an alert, instead of disappearing.</figcaption></figure>
