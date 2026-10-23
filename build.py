@@ -112,6 +112,7 @@ def header():
 
 def footer():
     gh = SITE["links"]["github"]
+    li = f'<a href="{SITE["links"]["linkedin"]}">LinkedIn</a>' if SITE["links"].get("linkedin") else ""
     return f"""<footer>
 <div class="wrap cols">
 <div>
@@ -119,7 +120,7 @@ def footer():
 <p>All projects are demos on synthetic or public data and are not client work. The finance and market-data demos use reference or delayed data, are not investment advice and have no trading features. Not affiliated with, endorsed by or sponsored by any data provider.</p>
 <p>This site is static: no cookies, no analytics, no third-party requests. Typeface: Inter, under the SIL Open Font License.</p>
 </div>
-<div class="links"><a href="{gh}">GitHub</a><a href="{C.REPO}">Source of this site</a><a href="#top">Back to top</a></div>
+<div class="links">{li}<a href="{gh}">GitHub</a><a href="{C.REPO}">Source of this site</a><a href="#top">Back to top</a></div>
 </div>
 </footer>
 <script src="/assets/site.js" defer></script>
@@ -165,8 +166,8 @@ def contact_buttons():
     L, out = SITE["links"], []
     if L.get("upwork"): out.append(f'<a class="btn btn-primary" href="{L["upwork"]}">Hire me on Upwork</a>')
     if L.get("fiverr"): out.append(f'<a class="btn btn-primary" href="{L["fiverr"]}">See my Fiverr gigs</a>')
-    if L.get("linkedin"): out.append(f'<a class="btn btn-ghost" href="{L["linkedin"]}">LinkedIn</a>')
-    out.append(f'<a class="btn {"btn-ghost" if out else "btn-primary"}" href="{L["github"]}">{icon("github")}All the code on GitHub</a>')
+    if L.get("linkedin"): out.append(f'<a class="btn {"btn-ghost" if out else "btn-primary"}" href="{L["linkedin"]}">{"Message me on LinkedIn" if not out else "LinkedIn"}</a>')
+    out.append(f'<a class="btn btn-ghost" href="{L["github"]}">{icon("github")}All the code on GitHub</a>')
     return "".join(out)
 
 

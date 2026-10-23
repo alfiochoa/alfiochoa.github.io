@@ -16,7 +16,7 @@ SITE = {
         "github": "https://github.com/alfiochoa",
         "upwork": "",
         "fiverr": "",
-        "linkedin": "",
+        "linkedin": "https://www.linkedin.com/in/alfredochoa/",
     },
     "meta": ["Madrid time", "About 30 h a week", "Spanish and English"],
 }
